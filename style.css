@@ -1,0 +1,85 @@
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+h1 {
+  font-family: "Raleway Dots", cursive;
+  text-align: center;
+  font-size: 45px;
+  color: #4592af;
+}
+button {
+  outline: #4592af;
+}
+button:hover {
+  color: #e3c4a8;
+}
+ul {
+  list-style-type: none;
+  text-align: left;
+  font-size: 15px;
+  padding-left: 0;
+  padding-top: 30px;
+}
+.card {
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  padding-bottom: 40px;
+  margin: 0 auto;
+}
+.btn-light {
+  outline: transparent;
+  background-color: transparent;
+}
+.btn-light:hover {
+  background-color: #4592af;
+}
+.section-current-temperature {
+  color: #226089;
+}
+.current-city {
+  color: #e3c4a8;
+  font-weight: bolder;
+  font-size: 40px;
+}
+.current-time {
+  color: #226089;
+}
+.current-temperature {
+  font-size: 135px;
+  font-weight: 450;
+  color: #4592af;
+  text-align: center;
+  margin-left: 0;
+}
+.current-weather-icon {
+  font-size: 60px;
+  color: #4592af;
+}
+.temperature-properties {
+  padding-bottom: 28px;
+}
+.time-for-icon {
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+}
+.time-for {
+  text-align: center;
+  color: #226089;
+  font-weight: 800;
+  font-size: 17px;
+}
+.section-forecast {
+  color: #226089;
+  text-align: center;
+  line-height: 2;
+}
+.forecast-temperature {
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+.weather-icon {
+  font-size: 35px;
+  color: #4592af;
+  opacity: 0.5;
+}
