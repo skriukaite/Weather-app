@@ -83,3 +83,8 @@ ul {
   color: #4592af;
   opacity: 0.5;
 }
+.link-to-github {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+}
