@@ -43,6 +43,12 @@ ul {
 }
 .current-time {
   color: #226089;
+  font-size: 15px;
+  margin-left: 8px;
+  display: block;
+}
+.current-time::first-letter {
+  text-transform: uppercase;
 }
 .current-temperature {
   font-size: 135px;

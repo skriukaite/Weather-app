@@ -49,6 +49,7 @@ function showData(response) {
   showWindSpeed(response);
   showPerceivedTemperature(response);
   showEnteredCity(response);
+  showWeatherDescription(response);
 }
 function showEnteredCity(response) {
   let enteredCity = document.querySelector("#entered-current-city");
@@ -88,4 +89,10 @@ function showPerceivedTemperature(response) {
   let feeling = Math.round(response.data.main.feels_like);
   let temperatureFeeling = document.querySelector("#feels-like");
   temperatureFeeling.innerHTML = feeling;
+}
+
+function showWeatherDescription(response) {
+  let description = response.data.weather[0].description;
+  let weatherDescription = document.querySelector("#weather-description");
+  weatherDescription.innerHTML = description;
 }
