@@ -58,8 +58,7 @@ ul {
   margin-left: 0;
 }
 .current-weather-icon {
-  font-size: 60px;
-  color: #4592af;
+  font-size: 100px;
 }
 .temperature-properties {
   padding-bottom: 28px;

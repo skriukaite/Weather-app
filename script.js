@@ -50,6 +50,7 @@ function showData(response) {
   showPerceivedTemperature(response);
   showEnteredCity(response);
   showWeatherDescription(response);
+  showWeatherIcon(response);
 }
 function showEnteredCity(response) {
   let enteredCity = document.querySelector("#entered-current-city");
@@ -95,4 +96,10 @@ function showWeatherDescription(response) {
   let description = response.data.weather[0].description;
   let weatherDescription = document.querySelector("#weather-description");
   weatherDescription.innerHTML = description;
+}
+
+function showWeatherIcon(response) {
+  let icon = document.querySelector("#current-weather-icon");
+  let iconCode = response.data.weather[0].icon;
+  icon.src = `http://openweathermap.org/img/wn/${iconCode}.png`;
 }
