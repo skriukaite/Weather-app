@@ -101,5 +101,5 @@ function showWeatherDescription(response) {
 function showWeatherIcon(response) {
   let icon = document.querySelector("#current-weather-icon");
   let iconCode = response.data.weather[0].icon;
-  icon.src = `http://openweathermap.org/img/wn/${iconCode}.png`;
+  icon.src = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
 }
