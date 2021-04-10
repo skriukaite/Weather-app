@@ -21,6 +21,9 @@ ul {
   padding-left: 0;
   padding-top: 30px;
 }
+a {
+  text-decoration: none;
+}
 .card {
   background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
   padding-bottom: 40px;

@@ -58,19 +58,19 @@ function showEnteredCity(response) {
 }
 
 function showTemperature(response) {
-  let temperature = Math.round(response.data.main.temp);
+  celsiusTemperature = Math.round(response.data.main.temp);
   let degrees = document.querySelector("#current-degrees");
-  degrees.innerHTML = temperature;
+  degrees.innerHTML = celsiusTemperature;
 
-  timeFor(temperature);
+  timeFor(celsiusTemperature);
 
-  function timeFor(temperature) {
+  function timeFor(celsiusTemperature) {
     let offer = document.querySelector("#offer");
     let offerImage = document.querySelector("#offer-image");
-    if (temperature <= 10) {
+    if (celsiusTemperature <= 10) {
       offer.innerHTML = "hot herbal tea";
       offerImage.src = "media/tea.svg";
-    } else if (temperature > 10 && temperature <= 20) {
+    } else if (celsiusTemperature > 10 && celsiusTemperature <= 20) {
       offer.innerHTML = "refreshing drink";
       offerImage.src = "media/drink.svg";
     } else {
@@ -103,3 +103,23 @@ function showWeatherIcon(response) {
   let iconCode = response.data.weather[0].icon;
   icon.src = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
 }
+
+function showFahrenheitValue(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let temperatureValue = document.querySelector("#current-degrees");
+  temperatureValue.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let celsiusTemperature = null;
+let fahrenheitValue = document.querySelector("#fahrenheit");
+fahrenheitValue.addEventListener("click", showFahrenheitValue);
+
+function showCelsiusValue(event) {
+  event.preventDefault();
+  let temperatureValue = document.querySelector("#current-degrees");
+  temperatureValue.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusValue = document.querySelector("#celsius");
+celsiusValue.addEventListener("click", showCelsiusValue);
