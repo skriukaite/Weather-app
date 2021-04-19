@@ -26,7 +26,7 @@ a {
 }
 .card {
   background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   margin: 0 auto;
 }
 .btn-light {
@@ -78,6 +78,8 @@ a {
   color: #226089;
   text-align: center;
   line-height: 2;
+  font-size: 14px;
+  padding-top: 10px;
 }
 .forecast-temperature {
   letter-spacing: 0.2rem;
