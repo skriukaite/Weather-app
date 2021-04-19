@@ -109,7 +109,7 @@ function showWeatherDescription(response) {
 function showWeatherIcon(response) {
   let icon = document.querySelector("#current-weather-icon");
   let iconCode = response.data.weather[0].icon;
-  icon.src = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
+  icon.src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 }
 
 function showFahrenheitValue(event) {
@@ -154,7 +154,7 @@ function displayForecast(response) {
         `
     <div class="col-sm">
        <div id="forecast-day">${formatDay(forecastDay.dt)}</div>
-       <img src=http://openweathermap.org/img/wn/${iconCode}.png alt="weather icon">
+       <img src=https://openweathermap.org/img/wn/${iconCode}.png alt="weather icon">
        <div class="forecast-temperature">
           <span id="max-temperature"><strong>${Math.round(
             forecastDay.temp.max
