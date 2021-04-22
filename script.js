@@ -112,32 +112,11 @@ function showWeatherIcon(response) {
   icon.src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 }
 
-function showFahrenheitValue(event) {
-  event.preventDefault();
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  let temperatureValue = document.querySelector("#current-degrees");
-  temperatureValue.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-let celsiusTemperature = null;
-let fahrenheitValue = document.querySelector("#fahrenheit");
-fahrenheitValue.addEventListener("click", showFahrenheitValue);
-
-function showCelsiusValue(event) {
-  event.preventDefault();
-  let temperatureValue = document.querySelector("#current-degrees");
-  temperatureValue.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsiusValue = document.querySelector("#celsius");
-celsiusValue.addEventListener("click", showCelsiusValue);
-
 function getCoordinates(coordinates) {
   let apiKey = "c9e949520b33b479d97265ad4b8693ed";
   let lat = coordinates.lat;
   let lon = coordinates.lon;
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
 

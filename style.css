@@ -62,6 +62,7 @@ a {
 }
 .temperature-properties {
   padding-bottom: 28px;
+  paddint-top: 0px;
 }
 .time-for-icon {
   display: block;
