@@ -123,7 +123,6 @@ function getCoordinates(coordinates) {
 
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
-  let iconCode = response.data.current.weather[0].icon;
   let forecast = response.data.daily;
 
   let forecastHTML = `<div class="row">`;
@@ -134,7 +133,9 @@ function displayForecast(response) {
         `
     <div class="col-sm">
        <div id="forecast-day">${formatDay(forecastDay.dt)}</div>
-       <img src=https://openweathermap.org/img/wn/${iconCode}.png alt="weather icon">
+       <img src=https://openweathermap.org/img/wn/${
+         forecastDay.weather[0].icon
+       }.png alt="weather icon">
        <div class="forecast-temperature">
           <span id="max-temperature"><strong>${Math.round(
             forecastDay.temp.max
