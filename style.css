@@ -94,9 +94,13 @@ a {
 .link-to-github {
   font-size: 12px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 #current-weather-icon {
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
+}
+#offer-image {
+  padding-top: 26px;
+  padding-right: 10px;
 }

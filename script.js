@@ -26,6 +26,7 @@ function formatDate(date) {
   currentTime.innerHTML = `${formattedDate}`;
 }
 formatDate(currentTime);
+getTemperatureByCity("vilnius");
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
